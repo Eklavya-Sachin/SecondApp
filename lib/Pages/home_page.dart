@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Catalog App"),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.deepPurple,
       ),
       body: const Center(
         child: Text("Welcome to 30 days of Flutter"),

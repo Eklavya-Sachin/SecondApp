@@ -1,4 +1,6 @@
+import 'package:aswesome_app_2/models/catalog.dart';
 import 'package:aswesome_app_2/widgets/drawer.dart';
+import 'package:aswesome_app_2/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,8 +15,14 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-      body: const Center(
-        child: Text("Welcome to 30 days of Flutter"),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return Itemwidget(item: CatalogModel.items[index]);
+          },
+        ),
       ),
       drawer: const MyDrawer(),
     );

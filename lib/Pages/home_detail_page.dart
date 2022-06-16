@@ -30,7 +30,9 @@ class HomeDetailPage extends StatelessWidget {
           ],
         ).p32(),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
         bottom: false,
@@ -48,15 +50,23 @@ class HomeDetailPage extends StatelessWidget {
               child: Container(
                 color: Colors.white,
                 width: context.screenWidth,
-                child: Column(
-                  children: [
-                    catalog.name.text.xl3
-                        .color(MyTheme.darkBluishColor)
-                        .bold
-                        .make(),
-                    catalog.desc.text.textStyle(context.captionStyle).xl.make(),
-                  ],
-                ).p32(),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      catalog.name.text.xl3
+                          .color(MyTheme.darkBluishColor)
+                          .bold
+                          .make(),
+                      catalog.desc.text
+                          .textStyle(context.captionStyle)
+                          .xl
+                          .make(),
+                      "Et sit stet est magna consetetur. Et sea diam lorem ipsum sea dolor lorem. Takimata dolor labore est voluptua voluptua, eirmod clita sea et no lorem amet amet no, eos sit dolor sadipscing magna no, sed diam duo dolor ipsum, diam diam sed dolor magna elitr dolore takimata justo dolore.."
+                          .text
+                          .make(),
+                    ],
+                  ).p32(),
+                ),
               ),
             ))
           ],

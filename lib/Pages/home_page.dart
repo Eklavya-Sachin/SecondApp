@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:aswesome_app_2/models/catalog.dart';
 import 'package:aswesome_app_2/utils/routes.dart';
-import 'package:aswesome_app_2/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,10 +39,11 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           Navigator.pushNamed(context, MyRoutes.cartRoute);
         },
-        backgroundColor: MyTheme.darkBluishColor,
-        child: const Icon(CupertinoIcons.cart),
+        // ignore: deprecated_member_use
+        backgroundColor: context.theme.buttonColor,
+        child: const Icon(CupertinoIcons.cart, color: Colors.white),
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
           padding: Vx.m32,

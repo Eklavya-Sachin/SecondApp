@@ -1,4 +1,3 @@
-import 'package:aswesome_app_2/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../models/catalog.dart';
